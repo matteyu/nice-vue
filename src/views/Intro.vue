@@ -12,7 +12,7 @@
                   <ion-col id="login-section">
                       <ion-input id="logininput" placeholder="Username"></ion-input>
                       <ion-input id="passwordinput" placeholder="Password" type="password"></ion-input>
-                      <ion-button id="loginbtn">Login</ion-button>
+                      <ion-button id="loginbtn" @click="handleLogin">Login</ion-button>
                       <ion-button id="registerbtn">Register</ion-button>
                   </ion-col>
               </ion-row>
@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage, IonGrid, IonCol, IonRow, IonImg } from '@ionic/vue';
+import { IonContent, IonPage, IonGrid, IonCol, IonRow, IonImg, IonButton, IonInput } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -34,6 +34,14 @@ export default defineComponent({
     IonGrid,
     IonCol,
     IonRow,
+    IonButton,
+    IonInput
+  },
+  setup(){
+      const handleLogin = () => {
+          alert("this is cool")
+      }
+      return { handleLogin }
   }
 });
 </script>
